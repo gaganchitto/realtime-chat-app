@@ -60,3 +60,9 @@ body {
     cursor: pointer;
     border: 2px solid black;
 }
+
+#username {
+    width: 40%;
+    height: 30px;
+    border: 2px solid black;
+}
