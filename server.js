@@ -5,7 +5,7 @@ const app = express();
 // const fs = require('fs');
 const http = require('http').createServer(app);
 const io = require("socket.io")(http);
-const port = process.env.port || 80;
+const port = process.env.port;
 
 
 http.listen(port, () => {
