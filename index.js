@@ -1,6 +1,6 @@
 //node server
-
-const io = require('socket.io')(8000);
+const port = process.env.port;
+const io = require('socket.io')(port);
 
 const users = {};
 
