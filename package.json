@@ -4,12 +4,13 @@
     "description": "This is My node server for my Chatting App.",
     "main": "index.js",
     "scripts": {
-        "start": "node index.js",
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "dev": "nodemon server"
     },
     "author": "Gagan Chittoria",
     "license": "ISC",
     "dependencies": {
+        "express": "^4.17.1",
+        "http": "0.0.1-security",
         "socket.io": "^2.3.0"
     }
 }
