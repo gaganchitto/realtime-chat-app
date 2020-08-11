@@ -25,18 +25,27 @@ form.addEventListener('submit', (e) => {
     append(`You : ${message}`, 'right');
     socket.emit('send', message);
     msgInput.value = '';
+    scrollTo();
+
 })
 
 // ab server s name leke aana h and apne msg container m dikhana h
 
 socket.on('user-joined', data => {
     append(`${data.name} joined the Chat`, 'left');
+    scrollTo();
 })
 
 socket.on('recieve', data => {
     append(`${data.name} : ${data.message}`, 'left');
+    scrollTo();
 })
 
 socket.on('left', name => {
     append(`${name} left the Chat.`, 'left');
+    scrollTo();
 })
+
+function scrollTo() {
+    messageContainer.scrollTop = messageContainer.scrollHeight;
+}
